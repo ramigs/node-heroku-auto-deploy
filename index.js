@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 
 const isProduction = process.env.NODE_ENV === 'production'
 const origin = {
-  origin: isProduction ? 'https://node-auto-deploy.herokuapp.com' : '*',
+  origin: isProduction ? 'https://www.example.com' : '*',
 }
 
 app.use(cors(origin))
