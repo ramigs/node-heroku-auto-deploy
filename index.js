@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors())
 
 const getAlbums = (request, response) => {
-  pool.query('SELECT * FROM albuns', (error, results) => {
+  pool.query('SELECT * FROM albums', (error, results) => {
     if (error) {
       throw error
     }
