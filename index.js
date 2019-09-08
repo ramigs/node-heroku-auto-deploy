@@ -31,7 +31,7 @@ const addAlbum = (request, response) => {
 
 app
   .route('/albums')
-  // GET endpoint
+
   .get(getAlbums)
   // POST endpoint
   .post(addAlbum)
