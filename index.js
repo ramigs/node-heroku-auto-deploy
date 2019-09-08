@@ -4,13 +4,20 @@ const cors = require('cors')
 const { pool } = require('./config')
 const helmet = require('helmet')
 const compression = require('compression')
-//const rateLimit = require('express-rate-limit')
+const rateLimit = require('express-rate-limit')
 //const { body, check } = require('express-validator')
 
 const app = express()
 
 app.use(helmet())
 app.use(compression())
+
+const limiter = rateLimit({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 5 // 5 requests,
+})
+
+app.use(limiter)
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))

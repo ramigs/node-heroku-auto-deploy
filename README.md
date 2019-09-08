@@ -1,13 +1,17 @@
 # nodejs-heroku-auto-deploy
+
+Bare-bones REST API using Express as framework and PostgreSQL as database.
+
 Testing automatic deploy of a Node.js app on Heroku.
 
-REST API with Express as framework and PostgreSQL as database.
-
-## Testing locally
+## Running locally
 
 ```
 heroku local web
 ```
-## Deploying to Production
 
-Pushing to master, triggers build and deploy in Heroku.
+## Deploying to Heroku
+
+```
+git push origin master
+```
